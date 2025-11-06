@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes"
+    />
+    <title>Dictionary Lookup</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Client JS -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="title">Dictionary Lookup</h1>
+        <p class="subtitle">Powered by the Free Dictionary API</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section aria-labelledby="search-heading" class="card">
+        <h2 id="search-heading" class="visually-hidden">Search word</h2>
+
+        <form id="lookup-form" novalidate>
+          <label for="word-input" class="input-label">Enter an English word</label>
+          <div class="input-row">
+            <input
+              id="word-input"
+              name="word"
+              type="text"
+              placeholder="e.g., serendipity"
+              autocomplete="off"
+              required
+              aria-describedby="input-help"
+            />
+            <button type="submit" class="btn">Search</button>
+          </div>
+          <p id="input-help" class="help-text">
+            Tip: try any simple English word.
+          </p>
+        </form>
+
+        <!-- Status region for loading/errors (screen-reader friendly) -->
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </section>
+
+      <section aria-labelledby="results-heading" class="card">
+        <h2 id="results-heading">Results</h2>
+        <!-- Results will be injected here -->
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <a
+            id="github-link"
+            href="https://github.com/milo-neumann"
+            target="_blank"
+            rel="noopener"
+          >Milo Neumann</a>
+             • CSC 317 • 
+          <a
+            id="github-link"
+            href="https://github.com/milo-neumann/dictionary-app-api"
+            target="_blank"
+            rel="noopener"
+          >Project Repo</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
