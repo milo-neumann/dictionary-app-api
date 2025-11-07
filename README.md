@@ -26,5 +26,5 @@ This app allows users to:
 - **Render** for deployment.
 
 
-🧑‍💻 Author
+### 🧑‍💻 Author
 Milo Neumann
